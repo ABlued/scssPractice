@@ -24,37 +24,57 @@ a {
   border-radius: 20px;
   border: 3px solid #f00;
   box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
-}
+  // scss를 사용하면 css요소가 마치 html dom처럼 코드를 사용할 수 있다.
+  & > a {
+    color: #a22;
+    text-decoration: none;
+    &:hover {
+      // & 상위요소를 나타낸다.
+      color: #000;
+      text-decoration: underline;
+    }
+  }
 
-#box1 > a {
-  color: #a22;
-  text-decoration: none;
+  &:hover {
+    background-color: #ccc;
+  }
+  // id 그대로 이어붙여도 적용이 된다 &-title은 box1-title과 동일하다.
+  &-title {
+    font-style: italic;
+    text-decoration: underline;
+  }
 }
-
-#box1 > a:hover {
-  color: #000;
-  text-decoration: underline;
-}
-
-#box1:hover {
-  background-color: #ccc;
-}
-
+// 이 포함관계는 위에 #box1 내로 집어넣을 수 있지만 코드가 길어지면 가독성이 떨어지므로
+// 그냥 이렇게 따로 빼주는 것이 나을수도 있다.
 #box1 #box2 {
   font-size: 20px;
   background-color: #e9e9e9;
-
   border-radius: 20px;
   border: 3px solid #f00;
   box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+  & > a {
+    color: #ee6633;
+    text-decoration: none;
+    &:hover {
+      color: #a22;
+      text-decoration: underline;
+    }
+  }
 }
 
-#box1 #box2 > a {
-  color: #ee6633;
-  text-decoration: none;
+.box1 .box2 .box3 {
 }
 
-#box1 #box2 > a:hover {
-  color: #a22;
-  text-decoration: underline;
+.box1 {
+  .box2 {
+    .box3 {
+      // 이런 식으로 작성할 수 있다.
+    }
+  }
+}
+
+.box1 {
+  .box2 .box3 {
+    // 이런 식으로도 작성할 수 있다. 포함관계에 따라 알맞게 선택하면 된다.
+  }
 }
