@@ -1,0 +1,28 @@
+$bg-color: #00f; // 여러 군데에서 쓰이는 값은 $을 통해 변수 설정을 하여 한 번에 적용할 수 있다.
+body {
+  background-color: #ddd;
+}
+#Box1 {
+  color: #ff0;
+  background-color: $bg-color;
+  width: 100px;
+}
+#Box2 {
+  color: #f00;
+  background-color: $bg-color;
+  width: 100px;
+}
+#Box3 {
+  color: #ff0;
+  background-color: $bg-color;
+  width: 300px;
+}
+#Box4 {
+  color: #f00;
+  background-color: $bg-color;
+  width: 300px;
+}
+#Box5 {
+  color: #0f0;
+  background-color: $bg-color;
+}

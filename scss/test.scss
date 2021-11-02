@@ -1,0 +1,8 @@
+// scss 파일을 css파일로 변환시켜주는 것이 Live Sass Compiler 이다.
+
+$fs: 16px; // 변수명은 앞에 $을 붙인다.
+$background_color: red;
+body {
+  font-size: $fs;
+  background-color: background_color;
+}
