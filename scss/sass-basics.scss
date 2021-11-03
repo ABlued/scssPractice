@@ -1,3 +1,6 @@
+$mobileWidth: 375px;
+$tabletWidth: 768px;
+$labtopWidth: 1024px;
 html {
   font-size: 18px;
 }
@@ -42,6 +45,14 @@ a {
   &-title {
     font-style: italic;
     text-decoration: underline;
+  }
+
+  @media screen and (max-width: $mobileWidth) {
+    // 반응형 웹에 가장 많이 쓰이는 미디어 쿼리이다.
+    font-size: 14px;
+  }
+  @media screen and(min-width:$mobileWidth) and(max-width: $labtopWidth) {
+    font-size: 24px;
   }
 }
 // 이 포함관계는 위에 #box1 내로 집어넣을 수 있지만 코드가 길어지면 가독성이 떨어지므로
