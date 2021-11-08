@@ -1,0 +1,17 @@
+// font-weight, font-size 같이 중복되는 네임 스페이스(식별자)를 가지면은 한번에 묶어서 사용할 수 있다.
+// 이 scss파일을 css/OverlappingProperties.css 와 비교해보자
+.box {
+  font: {
+    weight: blod;
+    size: 10px;
+    family: sans-seirf;
+  }
+  margin: {
+    top: 10px;
+    left: 20px;
+  }
+  padding: {
+    bottom: 40px;
+    right: 30px;
+  }
+}

@@ -1,0 +1,35 @@
+// SCSS에는 7가지의 데이터를 변수로 저장할 수 있다.
+
+// numbers(숫자) : 단위가 있거나 없습니다.
+$numbers: 1;
+$float: 0.82;
+$fixedSize: 20px;
+$relativeSize: 2em;
+
+// string(문자) : 문자에 따옴표가 있거나 없습니다.
+$fontWeight: bold;
+$position: relative;
+$path: '/images/a.jpg';
+
+// color(문자)
+$red: red;
+$blue: blue;
+$RGB: #ffffff;
+$CMYK: rgba(255, 0, 0, 0.5);
+
+// Booleans(논리)
+$true: true;
+$false: false;
+
+// Nulls(아무것도 없음) : 속성값이 null값이면 컴파일하지 않습니다.
+$null: null;
+
+// List(공백이나 , 로 구분된 값의 목록) : () 를 붙이거나 붙이지 않습니다.
+$list: (apple, orange, banana);
+
+// Maps (Key : Value)의 형태 : () 를 꼭 붙여야 합니다.
+$map: (
+  age: 20,
+  name: ablue,
+  favorite: coding,
+);
